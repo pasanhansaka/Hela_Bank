@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.body1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #34495e;
+    text-align: center;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #27ae60;
+}
+
+.action-button-container {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form,
+.login-container form {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    display: block;
+}
+
+.modal-content form table,
+.login-container form table {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+.modal-content form table thead,
+.login-container form table thead {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.modal-content form table th,
+.modal-content form table td,
+.login-container form table th,
+.login-container form table td,
+.register-container form table th,
+.register-container form table td {
+    border: none;
+    padding: 10px 0;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"],
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #19d056;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #35e238;
+}
+
+.login-container,
+.register-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.login-container form table,
+.register-container form table {
+    margin-bottom: 15px;
+}
+
+.login-container form table tr,
+.register-container form table tr {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login-container form table th,
+.register-container form table th {
+    flex: 0 0 100px;
+    text-align: right;
+    padding-right: 15px;
+    color: #555;
+    font-weight: normal;
+}
+
+.login-container form table td,
+.register-container form table td {
+    flex-grow: 1;
+}
+
+.login-container .form-submit-row,
+.register-container .form-submit-row {
+    text-align: center;
+    padding-top: 15px;
+    flex: 1;
+}
+
+.modal-content form input[type="number"],
+.modal-content form input[type="text"],
+.modal-content form select,
+.login-container form input[type="text"],
+.login-container form input[type="password"],
+.register-container form input[type="text"],
+.register-container form input[type="email"],
+.register-container form input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-content form input[type="submit"],
+.login-container form input[type="submit"],
+.register-container form input[type="submit"] {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.login-link,
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.error-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    text-align: center;
+    padding: 40px;
+}
+
+.error-page-container h1 {
+    font-size: 2.5em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.error-page-container h5 {
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+.error-page-container a {
+    margin-top: 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.error-page-container a:hover {
+    background-color: #2980b9;
+}
+
+.status-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    text-align: center;
+    padding: 40px;
+}
+
+.status-page-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2ecc71;
+}
+
+.status-page-container h2.failed {
+    color: #e74c3c;
+}
+
+.status-page-container a {
+    margin-top: 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.status-page-container a:hover {
+    background-color: #2980b9;
+}
